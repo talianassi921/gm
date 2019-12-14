@@ -1,5 +1,5 @@
-from image_recognition.image_labels import get_image_labels
-from image_recognition.image_labels import get_object_bounds
+from image_recognition import get_image_labels
+from image_recognition import get_object_bounds
 
 class PerceptionTests:
     
