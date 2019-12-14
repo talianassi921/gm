@@ -11,21 +11,16 @@ class PerceptionTests:
     def test_count_cats_in_image(self):
         """Ensures 4 cats are counted in cats image"""
         objects = get_object_bounds("four_cats.jpeg")
-        object_counter = 0
-        for recognized_object in objects:
-            if recognized_object.name == "Cat":
-                object_counter += 1
-        assert object_counter == 4
+        assert len(objects) == 4
         
     def test_no_object_in_image(self):
         """Ensures no objects are detected in blank image"""
         objects = get_object_bounds("blank_white.png")
-        object_counter = 0
-        for recognized_object in objects:
-            if recognized_object:
-                object_counter += 1
-        assert object_counter == 0
+        assert len(objects) == 0
+        
+    def test_object_bounds(self):
+        """Ensures object vertices are between 0 and 1"""
+        objects = get_object_bounds("four_cats.jpeg")
+        # assert that each vertex is between 0 and 1
+        
      
-
-# test that things dont exist in images, assert dog not in image, bicycle/tricycle
-# test the bounds - assert each vertex is >0 and less than 1
