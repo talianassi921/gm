@@ -1,5 +1,3 @@
-[![asv](http://img.shields.io/badge/benchmarked%20by-asv-blue.svg?style=flat)](https://github.com/talianassi921/gm)
-
 # Perception Tests for General Motors
 
 General Motors Object Detection Assignment
@@ -31,12 +29,11 @@ This will print a coverage report with each test run
 
 To run your tests, enter the follwing command:
 ```bash
-pytest -v -s -n3 --cov=tests/ --html=report.html
+./run_tests.sh
 ```
--v means verbose, so you can get a clear understanding of which tests passed or failed
 
--s refers to system outputs, so you can see what gets outputted from your tests, if anything
+If you get a permissions error, enter ```chmod +x run_tests.sh``` and try again
 
--n# refers to the number of tests you would like to run at a time (Ideally this would be done automatically in GCP but for the purposes of this project, this will do)
+## Test Reports
 
-To view the test report, copy and paste the generated html report into your browser
+Each test run will generate a test report. To view the test report, copy and paste the generated html report into your browser.
