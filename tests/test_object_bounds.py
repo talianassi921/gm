@@ -1,12 +1,6 @@
-from image_recognition import get_image_labels
-from image_recognition import get_object_bounds
+from object_bounds import get_object_bounds
 
-class PerceptionTests:
-    
-    def test_cat_recognition(self):
-        """Ensures a cat is recognized in cats image"""
-        labels = get_image_labels("four_cats.jpeg")
-        assert any(label.description == "Cat" for label in labels)
+class ObjectBoundsTests:
 
     def test_count_cats_in_image(self):
         """Ensures 4 cats are counted in cats image"""
@@ -23,4 +17,3 @@ class PerceptionTests:
         objects = get_object_bounds("four_cats.jpeg")
         # assert that each vertex is between 0 and 1
         
-     
