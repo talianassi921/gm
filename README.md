@@ -1,3 +1,5 @@
+[![asv](http://img.shields.io/badge/benchmarked%20by-asv-blue.svg?style=flat)](https://github.com/talianassi921/gm)
+
 # Perception Tests for General Motors
 
 General Motors Object Detection Assignment
