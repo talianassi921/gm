@@ -7,6 +7,7 @@ __pycache__/
 *.so
 
 node_modules/
+report.html
 
 # Distribution / packaging
 .Python
