@@ -9,6 +9,7 @@ __pycache__/
 node_modules/
 report.html
 assets/
+.asv/results/benchmarks.json
 
 # Distribution / packaging
 .Python
