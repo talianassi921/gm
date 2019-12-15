@@ -1,6 +1,3 @@
-[![asv](http://img.shields.io/badge/benchmarked%20by-asv-blue.svg?style=flat)](https://github.com/talianassi921/gm)
-
-
 # Perception Tests for General Motors
 
 General Motors Object Detection Assignment
@@ -13,20 +10,16 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install [pytest
 pip3 install pytest
 ```
 
-Then install the following three packages.
+Then install the following two packages.
 
-```bash
-pip3 install pytest-xdist
-```
-This allows you to run multiple tests at a time
 ```bash
 pip3 install pytest-html
 ```
 This allows you to generate an html report for each test run
 ```bash
-pip3 install pytest-cov
+pip3 install pytest-benchmark
 ```
-This will print a coverage report with each test run
+This will print benchmarking of run time per test
 
 ## Running the Tests
 
