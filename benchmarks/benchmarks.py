@@ -1,28 +1,11 @@
+import os
+from tests.test_busy_freeway import BusyFreewayTests
+
 class TimeSuite:
-    """
-    An example benchmark that times the performance of various kinds
-    of iterating over dictionaries in Python.
-    """
-    def setup(self):
-        self.d = {}
-        for x in range(500):
-            self.d[x] = None
 
-    def time_keys(self):
-        for key in self.d.keys():
-            pass
-
-    def time_iterkeys(self):
-        for key in self.d.iterkeys():
-            pass
-
-    def time_range(self):
-        d = self.d
-        for key in range(500):
-            x = d[key]
-
-    def time_xrange(self):
-        d = self.d
-        for key in xrange(500):
-            x = d[key]
-
+    def time_test_road_recognition(self):
+        os.system("python3 -m pytest -v -n6 tests/")
+        busy_freeway_test = BusyFreewayTests()
+        busy_freeway_test.setup_method()
+        busy_freeway_test.test_road_recognition()
+ 

@@ -1,7 +1,7 @@
 from image_recognition.image_labels import get_image_labels
 from image_recognition.object_bounds import get_object_bounds
 
-class ImageLabelsTests:
+class EmptyRoadTests:
         
     def setup_method(self):
         self.image_labels = get_image_labels("empty_road.png")
