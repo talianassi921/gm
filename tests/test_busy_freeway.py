@@ -7,19 +7,28 @@ class BusyFreewayTests:
         self.image_labels = get_image_labels("busy_freeway.jpg")
         self.object_bounds = get_object_bounds("busy_freeway.jpg")
     
-    def test_road_recognition(self):
+    def test_road_recognition(self, benchmark):
+        benchmark(self.validate_road_recognition)
+        
+    def validate_road_recognition(self):
         """Ensures correct labels recognized in freeway image"""
         labels = [x.description.lower() for x in self.image_labels]
         freeway_labels = ["lane", "traffic", "road", "motor vehicle", "freeway"]
         for freeway_label in freeway_labels:
             assert freeway_label in labels
+            
+    def test_car_in_front_of_driver(self, benchmark):
+        benchmark(self.validate_car_in_front_of_driver)
     
-    def test_car_in_front_of_driver(self):
+    def validate_car_in_front_of_driver(self):
         """Ensures function detects car in front of driver"""
         car_object = next((x for x in self.object_bounds if x.name == "Car"), None)
         assert car_object is not None
         
-    def test_car_position(self):
+    def test_car_position(self, benchmark):
+        benchmark(self.validate_car_position)    
+    
+    def validate_car_position(self):
         """Ensures function returns correct position for car in front of driver """
         expected_car = {
             "top_left": {
