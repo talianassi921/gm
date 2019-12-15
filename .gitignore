@@ -8,6 +8,7 @@ __pycache__/
 
 node_modules/
 report.html
+assets/
 
 # Distribution / packaging
 .Python
